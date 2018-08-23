@@ -1,9 +1,13 @@
 #ifndef BLADE_NET_HPP
 #define BLADE_NET_HPP
-#pragma once
-#ifdef _MSC_VER
-#define  _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING 1
+
+/// FIX ASIO Compiler failed under MSVC 15.6 or Later
+#define _SILENCE_CXX17_ALLOCATOR_VOID_DEPRECATION_WARNING 1
+#ifdef _WIN32
+#define WIN32_LEAN_AND_MEAN
+#include <Windows.h>
 #endif
+#include <memory>
 #include <boost/asio.hpp>
 
 using io_context_t = boost::asio::io_context;
