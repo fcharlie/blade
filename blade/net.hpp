@@ -10,13 +10,16 @@
 #include <memory>
 #include <boost/asio.hpp>
 
+namespace ssh {
+using error_code = boost::system::error_code;
 using io_context_t = boost::asio::io_context;
 using socket_t = boost::asio::ip::tcp::socket;
 using io_work_t = boost::asio::executor_work_guard<io_context_t::executor_type>;
 using acceptor_t = boost::asio::ip::tcp::acceptor;
-
+using endpoint_t = boost::asio::ip::tcp::endpoint;
 #ifndef _WIN32
 using signal_set = boost::asio::signal_set;
 #endif
+} // namespace ssh
 
 #endif

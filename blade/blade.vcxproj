@@ -149,11 +149,13 @@
   <ItemGroup>
     <ClCompile Include="blade.cc" />
     <ClCompile Include="server.cc" />
+    <ClCompile Include="session.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="blade.hpp" />
     <ClInclude Include="net.hpp" />
     <ClInclude Include="server.hpp" />
+    <ClInclude Include="session.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
