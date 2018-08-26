@@ -50,8 +50,5 @@
     <ClInclude Include="buffer.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="wcharconv.hpp">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

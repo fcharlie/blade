@@ -234,7 +234,7 @@ _Digit_from_char(const char _Ch) noexcept // strengthened
 }
 
 template <class _RawTy>
-[[nodiscord]] inline from_wchars_result
+[[nodiscard]] inline from_wchars_result
 _Integer_from_wchars(const wchar_t *const _First, const wchar_t *const _Last,
                      _RawTy &_Raw_value,
                      const int _Base) noexcept // strengthened

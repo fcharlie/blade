@@ -4,12 +4,14 @@
 #include "net.hpp"
 //
 #include <memory>
+#include "blase.hpp"
 
 namespace blase {
 
 class HttpSession : public std::enable_shared_from_this<HttpSession> {
 public:
-  HttpSession(net::tcp::socket sock) : sock_(std::move(sock)) {
+  HttpSession(net::tcp::socket sock, const ServerContext &scontex)
+      : sock_(std::move(sock)), scontex_(scontex) {
     //
   }
   HttpSession(const HttpSession &) = delete;
@@ -24,6 +26,7 @@ public:
 
 private:
   net::tcp::socket sock_;
+  const ServerContext &scontex_;
 };
 
 } // namespace blase

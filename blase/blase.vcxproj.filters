@@ -15,7 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="blase.cpp">
+    <ClInclude Include="session.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="net.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="blase.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="blase.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="server.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="session.cc">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
