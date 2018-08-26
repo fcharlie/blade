@@ -15,7 +15,7 @@ public:
     //
   }
   void run();
-
+  void send_msg_kexinit();
 private:
   socket_t sock_;
   const ServerContext &scontext_;

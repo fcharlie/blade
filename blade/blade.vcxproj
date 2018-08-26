@@ -148,14 +148,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="blade.cc" />
+    <ClCompile Include="keys.cc" />
     <ClCompile Include="server.cc" />
     <ClCompile Include="session.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="blade.hpp" />
+    <ClInclude Include="buffer.hpp" />
+    <ClInclude Include="keys.hpp" />
     <ClInclude Include="net.hpp" />
     <ClInclude Include="server.hpp" />
     <ClInclude Include="session.hpp" />
+    <ClInclude Include="ssh.hpp" />
+    <ClInclude Include="wcharconv.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

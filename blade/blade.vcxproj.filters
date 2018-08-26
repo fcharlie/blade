@@ -24,6 +24,9 @@
     <ClCompile Include="session.cc">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="keys.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="server.hpp">
@@ -36,6 +39,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="session.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="keys.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ssh.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="buffer.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="wcharconv.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
