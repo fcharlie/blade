@@ -20,6 +20,7 @@ using tcp = boost::asio::ip::tcp;        // from <boost/asio/ip/tcp.hpp>
 using timer = boost::asio::steady_timer; // timer
 using strand = boost::asio::strand<boost::asio::io_context::executor_type>;
 namespace http = boost::beast::http; // from <boost/beast/http.hpp>
+using flat_buffer = boost::beast::flat_buffer;
 using error_code = boost::system::error_code;
 using io_context_t = boost::asio::io_context;
 using socket_t = boost::asio::ip::tcp::socket;

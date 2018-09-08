@@ -16,8 +16,8 @@ public:
   }
   HttpSession(const HttpSession &) = delete;
   HttpSession &operator=(const HttpSession &) = delete;
-  void run();
-  void HeaderCompleted();
+  void start();
+  void Dispatch();
   // Copy Request body to other socket pipe, file ...
   void WriteTo();
 
@@ -27,6 +27,8 @@ public:
 private:
   net::tcp::socket sock_;
   const ServerContext &scontex_;
+  net::flat_buffer buffer;
+  net::http::request<net::http::buffer_body> req;
 };
 
 } // namespace blase

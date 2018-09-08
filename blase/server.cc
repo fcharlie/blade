@@ -75,7 +75,6 @@ public:
     net::error_code ec;
     acceptor_.close(ec);
     iodevice_.Clear();
-    // wink::daemonize::changetitle("blade: worker process (old)");
   }
   void Acceptorclose(net::error_code &ec) {
     /// close acceptor
@@ -158,7 +157,7 @@ private:
 #ifndef _WIN32
           ::fcntl(sock_.native_handle(), F_SETFD, FD_CLOEXEC);
 #endif
-          std::make_shared<HttpSession>(std::move(sock_), scontext_)->run();
+          std::make_shared<HttpSession>(std::move(sock_), scontext_)->start();
           Accept();
         });
   }
