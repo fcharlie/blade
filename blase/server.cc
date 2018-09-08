@@ -59,17 +59,17 @@ private:
   std::size_t next_{0};
 };
 
-class SshServer {
+class HttpServer {
 public:
 #ifdef _WIN32
-  SshServer(std::size_t n) : iodevice_(n), acceptor_(iodevice_.Next()){};
+  HttpServer(std::size_t n) : iodevice_(n), acceptor_(iodevice_.Next()){};
 #else
-  SshServer(std::size_t n)
+  HttpServer(std::size_t n)
       : iodevice_(n), acceptor_(iodevice_.Next()), sigs_(iodevice_.Next()){};
 #endif
-  SshServer(const SshServer &) = delete;
-  SshServer &operator=(const SshServer &) = delete;
-  ~SshServer() {}
+  HttpServer(const HttpServer &) = delete;
+  HttpServer &operator=(const HttpServer &) = delete;
+  ~HttpServer() {}
 
   void DelayExit() {
     net::error_code ec;
