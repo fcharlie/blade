@@ -24,6 +24,12 @@
     <ClInclude Include="blase.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="picohttpparser.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="request.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="blase.cc">
@@ -33,6 +39,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="session.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="picohttpparser.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

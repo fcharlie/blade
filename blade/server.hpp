@@ -6,9 +6,9 @@
 namespace ssh {
 //
 #ifdef _WIN32
-typedef std::wstring String;
+typedef std::wstring string_t;
 #else
-typedef std::string String;
+typedef std::string string_t;
 #endif
 
 // Host keys path.
@@ -29,10 +29,10 @@ Root Require.
 /etc/ssh/ssh_host_ed25519_key
 */
 struct HostKeys {
-  String RSA;
-  String DSA;
-  String ECDSA;
-  String ED25519;
+  string_t RSA;
+  string_t DSA;
+  string_t ECDSA;
+  string_t ED25519;
 };
 struct ServerContext {
   std::string banner;

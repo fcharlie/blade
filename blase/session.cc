@@ -2,7 +2,7 @@
 #include "session.hpp"
 
 namespace blase {
-void HttpSession::start() {
+void HttpSession::run() {
   /// begin to parse request.
   auto self(shared_from_this());
   net::http::async_read(sock_, buffer, req,
@@ -14,6 +14,7 @@ void HttpSession::start() {
                           // TODO resolve header.
                         });
   // net::http::async_read_header(sock_,)
+
 }
 void HttpSession::Dispatch() {
   //

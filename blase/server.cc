@@ -143,7 +143,6 @@ private:
 #ifndef _WIN32
   signal_set sigs_;
 #endif
-  ServerContext scontext_;
   void Accept() {
     acceptor_.async_accept(
         iodevice_.Next(), [this](std::error_code ec, net::socket_t sock_) {
@@ -157,7 +156,7 @@ private:
 #ifndef _WIN32
           ::fcntl(sock_.native_handle(), F_SETFD, FD_CLOEXEC);
 #endif
-          std::make_shared<HttpSession>(std::move(sock_), scontext_)->start();
+          std::make_shared<HttpSession>(std::move(sock_))->run();
           Accept();
         });
   }

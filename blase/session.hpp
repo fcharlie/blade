@@ -8,15 +8,15 @@
 
 namespace blase {
 
+
 class HttpSession : public std::enable_shared_from_this<HttpSession> {
 public:
-  HttpSession(net::tcp::socket sock, const ServerContext &scontex)
-      : sock_(std::move(sock)), scontex_(scontex) {
+  HttpSession(net::tcp::socket sock) : sock_(std::move(sock)) {
     //
   }
   HttpSession(const HttpSession &) = delete;
   HttpSession &operator=(const HttpSession &) = delete;
-  void start();
+  void run();
   void Dispatch();
   // Copy Request body to other socket pipe, file ...
   void WriteTo();
@@ -26,7 +26,6 @@ public:
 
 private:
   net::tcp::socket sock_;
-  const ServerContext &scontex_;
   net::flat_buffer buffer;
   net::http::request<net::http::buffer_body> req;
 };

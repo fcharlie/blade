@@ -15,6 +15,7 @@ public:
     //
   }
   void run();
+  void kexfirstinitialise();
   void send_msg_kexinit();
 private:
   socket_t sock_;

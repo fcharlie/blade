@@ -3,7 +3,7 @@
 #pragma once
 
 #ifndef BLADE_VERSION
-#define BLADE_VERSION "2018.08"
+#define BLADE_VERSION "2018.09"
 #endif
 
 

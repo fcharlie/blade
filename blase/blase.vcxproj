@@ -160,12 +160,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="blase.cc" />
+    <ClCompile Include="picohttpparser.c" />
     <ClCompile Include="server.cc" />
     <ClCompile Include="session.cc" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="blase.hpp" />
     <ClInclude Include="net.hpp" />
+    <ClInclude Include="picohttpparser.h" />
+    <ClInclude Include="request.hpp" />
     <ClInclude Include="session.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
